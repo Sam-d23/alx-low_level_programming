@@ -1,6 +1,11 @@
 #include<stdio.h>
-int main()
+/**
+ *main - A program that prints a line using puts function
+ *return:0(Success)
+ */
+int main(void)
 {
-  puts("\"Programming is like building a multilingual puzzle") 
-  return 0;
+char task4[] = "\"Programming is like building a multilingual puzzle";
+puts(task4); 
+return (0);
 }
