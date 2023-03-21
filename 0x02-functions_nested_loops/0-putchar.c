@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<main.h>
 /**
  * main - A program that prints a line without using the standard library
  * Return: 0 (Success)
