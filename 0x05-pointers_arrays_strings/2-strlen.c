@@ -4,7 +4,7 @@
  * @s: string
  * Return: length
  */
-int _strlen(char *S)
+int _strlen(char *s)
 {
 int the_length = 0;
 while (*s != '\0')
