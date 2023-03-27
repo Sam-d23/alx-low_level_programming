@@ -18,11 +18,11 @@ j += 1;
 }
 else
 {
-j = i /2;
+j = i / 2;
 }
 for (; j < i; j++)
 {
 _putchar(str[j]);
 }
-_putchar('\0');
+_putchar('\n');
 }
