@@ -3,14 +3,22 @@
 /**
  * print_rev - prints a string in reverse
  * @s: the string to be reversed
+ * return: 0
  */
 void print_rev(char *s)
 {
-int j, n;
-s = "kenya";
-n = strlen(s);
-for (j = n-1;  j>=0; j--)
+int line = 0;
+int j;
+while (j != '\0')
 {
-_putchar(s[j]);
+line++;
+s++;
 }
+s--;
+for (j = line; j > 0; j--)
+{
+_putchar(*s);
+s--;
+}
+_putchar('\n');
 }
