@@ -6,28 +6,28 @@
  */
 int _atoi(char *s)
 {
-int a = 0;
-unsigned int un = 0; 
-int max  = 1;
-int sec = 0;
-while (s[a])
+int sign;
+unsigned int num;
+char *temp;
+temp = s;
+num = 0;
+sign = 1;
+while (*temp != '\0' && (*temp < '0' || *temp > '9' ))
 {
-if (s[a] == 45)
+if (*temp == '-')
 {
-max *= -1;
+sign * = -1;
 }
-while (s[a] >= 48 && s[a] <= 57)
+temp ++;
+}
+if (*temp != '\0')
 {
-sec = 1;
-un = (un * 10) + (s[a] - '0');
-a++;
-}
-if (sec == 1)
+do
 {
-break;
+num = num * 10 + (*temp - '0');
+temp++;
 }
-a++;
+while (*temp >= '0' && *temp <= '9');
 }
-un *= max;
-return (un);
+return num * sign;
 }
