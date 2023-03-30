@@ -1,5 +1,6 @@
 #include "main.h"
-/**_strncat - concatenates two strings using at most n bytes from src
+/**
+ * _strncat - concatenates two strings using at most n bytes from src
  * @dest: input
  * @src: input
  * @n: input
