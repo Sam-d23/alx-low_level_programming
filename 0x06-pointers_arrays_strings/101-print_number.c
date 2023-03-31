@@ -1,23 +1,19 @@
 #include "main.h"
-#include<stdio.h>
 /**
- * print_number - prints numbers
- *@n: integer parameters
- *Return: 0
+ * main - runs the code
+ * Return: 0
  */
-void print_number(int n)
+int main(void)
 {
-unsigned int n1;
-n1 = n;
-if (n < 0)
-{
-_putchar('-');
-n1 = -n;
-}
-if (n1 / 10 != 0)
-{
-print_number(n1 / 10);
-}
-_putchar((n1 % 10) + '0');
+print_number(98);
+_putchar('\n');
+print_number(402);
+_putchar('\n');
+print_number(1024);
+_putchar('\n');
+print_number(0);
+_putchar('\n');
+print_number(-98);
+_putchar('\n');
 return (0);
 }
