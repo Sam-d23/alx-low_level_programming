@@ -1,29 +1,15 @@
 #include "main.h"
+#include<stdio.h>
 /**
- * _strspn  - gets the length of a prefix substring.
- * @s: input
- * @accept: input
+ * main - runs the code
  * Return: 0 (Success)
  */
-unsigned int *_strspn(char *s, char *accept)
+int main(void)
 {
-unsigned int n = 0;
-int r;
-while (*s)
-{
-for (r = 0; accept[r]; r++)
-{
-if (*s == accept[r])
-{
-n++;
-break;
-}
-else if (accept[r + 1] == '\0')
-{
-return (n);
-}
-}
-s++;
-}
-return (n);
+char *s = "hello, world";
+char *f = "oleh";
+unsigned int n;
+n = _strspn(s, f);
+printf("%u\n", n);
+return (0);
 }
