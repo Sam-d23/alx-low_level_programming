@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
- *
- *
- *
+ * *argstostr - concatenates all program's arguments
+ * @ac: number of arguments
+ * @av: array of arguments
+ * Return: pointer to the string, else NULL
  */
 char *argstostr(int ac, char **av)
 {
@@ -16,7 +16,6 @@ if (ac == 0 || av == NULL)
 for (i = 0; i < ac; i++)
 {
 for (j = 0; av[i][j] != '\0'; j++)
-	len++;
 len++;
 }
 str = malloc(sizeof(char) * (len + 1));
