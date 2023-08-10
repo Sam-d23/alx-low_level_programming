@@ -14,7 +14,7 @@ char *p;
 unsigned int ls1, ls2, lp, i;
 if (s1 == NULL)
 	s1 = "";
-is (s2 == NULL)
+if (s2 == NULL)
 	s2 = "";
 for (ls1 = 0; s1[ls1] != '\0'; ls1++)
 {
