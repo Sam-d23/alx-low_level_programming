@@ -26,10 +26,16 @@ return (i);
 char *_strcpy(char *dest, char *src)
 {
 int l, i;
-while (src[i] != '\0')
+l = 0;
+while (src[l] != '\0')
 {
-dest[l] = src[i];
+l++;
 }
+for (i = 0; i < l; i++)
+{
+dest[i] = src[i];
+}
+dest[i] = '\0';
 return (dest);
 }
 /**
