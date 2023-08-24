@@ -1,6 +1,5 @@
 #include "lists.h"
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 /**
  * size_t - prints all the elements of a list_t list.
@@ -11,15 +10,14 @@
 size_t print_list(const list_t *h)
 {
 size_t size = 0;
-struct list_s *h = malloc(sizeof(struct list_s));
 while (h)
 {
-if (!h->str)
+if (h->str == NULL)
 	printf("|0| (nil)\n");
 else
 	printf("|%u| %s\n", h->len, h->str);
-h = h->next;
 size++;
+h = h->next;
 }
 return (size);
 }

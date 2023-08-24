@@ -1,5 +1,8 @@
 #ifndef LISTS_H
 #define LISTS_H
+#include <stdlib.h>
+#include <stddef.h>
+#include <string.h>
 /**
  * struct lists_s - singly linked lists
  * @str: string to be checked
