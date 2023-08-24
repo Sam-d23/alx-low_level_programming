@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <unistd.h>
 /**
  * size_t - prints all the elements of a list_t list.
  * @list_t: list whose elements are to be printed 
@@ -11,15 +10,19 @@
  */
 size_t print_list(const list_t *h)
 {
-size_t size = 0;
+int nodes = 0;
 while (h)
 {
-if (!h->str)
-	printf("|0| (nil)\n");
-else
-	printf("|%u| %s\n", h->len, h->str);
-h = h->next;
-size++;
+if (h->str == NULL)
+{
+printf("[0] (nil)\n");
 }
-return (size);
+else
+{
+printf("[%d] %s\n", h->len, h->str);
+}
+nodes++;
+h = h->next;
+}
+return (nodes);
 }
