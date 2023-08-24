@@ -1,6 +1,17 @@
 #ifndef LISTS_H
 #define LISTS_H
-int _putchar(char c);
+/**
+ * struct lists_s - singly linked lists
+ * @str: string to be checked
+ * @len: string length
+ * @next: pointer to the next node
+ */
+typedef struct list_s
+{
+char *str;
+unsigned int len;
+struct list_s *next;
+} list_t;
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *str);
