@@ -10,19 +10,16 @@
  */
 size_t print_list(const list_t *h)
 {
-int nodes = 0;
+size_t size = 0;
+struct list_s *h = malloc(sizeof(struct list_s));
 while (h)
 {
-if (h->str == NULL)
-{
-printf("[0] (nil)\n");
-}
+if (!h->str)
+	printf("|0| (nil)\n");
 else
-{
-printf("[%d] %s\n", h->len, h->str);
-}
-nodes++;
+	printf("|%u| %s\n", h->len, h->str);
 h = h->next;
+size++;
 }
-return (nodes);
+return (size);
 }
