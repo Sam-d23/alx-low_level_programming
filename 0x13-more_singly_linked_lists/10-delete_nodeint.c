@@ -28,6 +28,6 @@ j++;
 }
 new = node->next;
 node->next = new->next;
-free (new);
+free(new);
 return (1);
 }
