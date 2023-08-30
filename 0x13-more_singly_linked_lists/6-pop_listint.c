@@ -15,5 +15,5 @@ file = (*head)->n;
 new = (*head)->next;
 free(*head);
 *head = new;
-return (file)
+return (file);
 }
