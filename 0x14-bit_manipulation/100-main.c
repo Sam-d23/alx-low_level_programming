@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include "100-get_endianness.c"
 int main(void)
 {
 int n;
