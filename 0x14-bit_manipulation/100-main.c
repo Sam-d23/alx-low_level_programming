@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 #include "100-get_endianness.c"
+/**
+ * main - checks the endianness
+ * Return: 0
+ */
 int main(void)
 {
 int n;
