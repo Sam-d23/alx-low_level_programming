@@ -12,12 +12,12 @@ for (j = 63; j >= 0; j--)
 number = n >> j;
 if (number & 1)
 {
-_putchar('1');
+putchar('1');
 rec++;
 }
 else if (rec)
-	_putchar('0');
+	putchar('0');
 }
 if (!rec)
-	_putchar('0');
+	putchar('0');
 }
