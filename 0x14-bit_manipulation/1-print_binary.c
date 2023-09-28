@@ -7,15 +7,23 @@
  */
 void print_binary(unsigned long int n)
 {
-if (n > 1)
+int j, tarry = 0;
+unsigned long int bit;
+for (j = 63; j >= 0; j--)
 {
-print_binary(n >> 1);
-}
-_putchar(n & 1);
-}
-int main(void)
+bit = n >> j;
+if (bit & 1)
 {
-print_binary(n);
-_putchar('\n');
-return (0);
+_putchar('1');
+tarry++;
+}
+else if (tarry)
+{
+_putchar('0');
+}
+}
+if (!tarry)
+{
+_putchar('0');
+}
 }
