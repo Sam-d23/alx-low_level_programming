@@ -1,8 +1,7 @@
 #include "main.h"
 #include <stdio.h>
-/* print_binary - prints binary representation 
+/* print_binary - prints binary representation
  * @n: decimal number to be represented
- * Return: binary representation
  */
 void print_binary(unsigned long int n)
 {
@@ -22,5 +21,7 @@ _putchar('0');
 }
 }
 if (!tarry)
-	_putchar('0');
+{
+_putchar('0');
+}
 }
