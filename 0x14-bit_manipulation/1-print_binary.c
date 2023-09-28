@@ -5,23 +5,13 @@
  */
 void print_binary(unsigned long int n)
 {
-int j, tarry = 0;
-unsigned long int bit;
-for (j = 63; j >= 0; j--)
+unsigned int checker = 32768;
+while (checker > 0)
 {
-bit = n >> j;
-if (bit & 1)
-{
-_putchar('1');
-tarry++;
-}
-else if (tarry)
-{
-_putchar('0');
-}
-}
-if (!tarry)
-{
-_putchar('0');
+if ((n & checker) == 0)
+	_putchar('0');
+else
+	_putchar('1');
+checker = checker >> 1;
 }
 }
