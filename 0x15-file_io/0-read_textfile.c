@@ -21,5 +21,5 @@ r = read(f, size, letters);
 wr = write(STDOUT_FILENO, size, r);
 free(size);
 close(f);
-return(wr);
+return (wr);
 }
