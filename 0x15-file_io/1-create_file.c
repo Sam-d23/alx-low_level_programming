@@ -21,5 +21,5 @@ wr = write(f, text_content, length);
 if (f == -1 || wr == -1)
 	return (-1);
 close(f);
-return (-1);
+return (1);
 }
