@@ -44,15 +44,15 @@ switch (e_ident[EI_DATA])
 {
 case ELFDATANONE:
 	printf("none\n");
-        break;
+break;
 case ELFDATA2LSB:
-        printf("2's compliment, little endian\n");
-        break;
+printf("2's compliment, little endian\n");
+break;
 case ELFDATA2MSB:
-        printf("2's compliment, big endian\n");
-        break;
+printf("2's compliment, big endian\n");
+break;
 default:
-        printf("<unknown: %x>\n", e_ident[EI_CLASS]);
+printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 }
 }
 /**
@@ -106,7 +106,7 @@ switch (e_ident[EI_VERSION])
 {
 case EV_CURRENT:
 	printf(" (current)\n");
-        break;
+break;
 default:
 	printf("\n");
 	break;
@@ -210,7 +210,7 @@ e_entry = (e_entry << 16) | (e_entry >> 16);
 }
 if (e_ident[EI_CLASS] == ELFCLASS32)
 	printf("%#x\n", (unsigned int)e_entry);
-else 
+else
 {
 printf("%#lx\n", e_entry);
 }
