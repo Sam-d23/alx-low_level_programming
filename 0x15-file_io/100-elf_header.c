@@ -25,8 +25,8 @@ void check_elf_plus_print_magic(unsigned char *e_ident)
 int i;
 for (i = 0; i < 4; i++)
 {
-if (e_ident[i] != 127 && e_ident[i] != 'E' && e_ident[i] != 'L'
-&& e_ident != 'F')
+if (e_ident[i] != 127 && e_ident[i] != 'E' && e_ident[i] != 'L' &&
+		e_ident != 'F')
 {
 dprintf(STDERR_FILENO, "Error: This is not an elf file\n");
 exit(98);
@@ -230,7 +230,7 @@ dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 exit(98);
 }
 re = read(op, header, sizeof(Elf64_Ehdr));
-if (r == -1)
+if (re == -1)
 {
 free(header);
 close_elf(op);
