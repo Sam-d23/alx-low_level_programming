@@ -38,9 +38,13 @@ for (j = 0; j < EI_NIDENT; j++)
 {
 printf("%02x", e_ident[j]);
 if (j == EI_NIDENT - 1)
-        printf("\n");
+{
+printf("\n");
+}
 else
-        printf(" ");
+{
+printf(" ");
+}
 }
 /**
  * print_data - prints ELF header data
@@ -89,11 +93,11 @@ printf("   Version:      %d", e_ident[EI_VERSION]);
 switch (e_ident[EI_VERSION])
 {
 case EV_CURRENT:
-        printf(" (current)\n");
+printf(" (current)\n");
 break;
 default:
-        printf("\n");
-        break;
+printf("\n");
+break;
 }
 }
 /**
