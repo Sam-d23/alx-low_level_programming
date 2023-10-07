@@ -10,7 +10,7 @@ void print_data(unsigned char *e_ident);
 void print_class(unsigned char *e_ident);
 void print_magic(unsigned char *e_ident);
 void print_version(unsigned char *e_ident);
-void print_abi(unsigned int *e_ident);
+void print_abi(unsigned char *e_ident);
 void print_osabi(unsigned int *e_ident);
 void print_type(unsigned int e_type, unsigned char *e_ident);
 void print_entry(unsigned long int e_entry, unsigned char *e_ident);
@@ -26,7 +26,7 @@ int i;
 for (i = 0; i < 4; i++)
 {
 if (e_ident[i] != 127 && e_ident[i] != 'E' && e_ident[i] != 'L' &&
-		e_ident != 'F')
+		e_ident[i] != 'F')
 {
 dprintf(STDERR_FILENO, "Error: This is not an elf file\n");
 exit(98);
@@ -176,12 +176,13 @@ default:
 printf("  ABI Version:     %d\n", e_ident[EI_ABIVERSION]);
 }
 /**
- * print_entry - prints ELF header entry point
+ * print_entry_plus_close_elf - prints ELF header entry point
  * @e_entry: ELF entry point address
  * @e_ident: pointer to array of ELF class
  * @elf: ELF file descriptor
  */
-void print_entry(unsigned long int e_entry, unsigned char *e_ident, int elf)
+void print_entry_plus_close_elf(unsigned long int e_entry,
+		unsigned char *e_ident, int elf)
 {
 printf("  Entry point address:               ");
 if (e_ident[EI_DATA] == ELFDATA2MSB)
@@ -244,10 +245,10 @@ print_class(header->e_ident);
 print_data(header->e_ident);
 print_version(header->e_ident);
 print_osabi(header->e_ident);
-print_abi(header->e_ident);
-print_type(header->e_type, header->e_ident);
-print_entry(header->e_entry, header->e_ident);
+print_type_plus_print_abi(header->e_type, header->e_ident);
+print_entry_plus_close_elf(header->e_entry, header->e_ident);
 free(header);
 close_elf(op);
 return (0);
+}
 }
