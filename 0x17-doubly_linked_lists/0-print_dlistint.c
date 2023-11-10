@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 #include <string.h>
 
 /**
@@ -8,17 +9,12 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-int num;
-num = 0;
-if (h == NULL)
-	return (num);
-while (h->prev != NULL)
-	h = h->prev;
-while (h != NULL)
-{
-printf("%d\n", h->n);
-num++;
-h = h->next;
-}
-return (num);
+	size_t j;
+
+	for (j = 0; h != NULL; j++)
+	{
+		printf("%d\n ", h->n);
+		h = h->next;
+	}
+	return (j);
 }
