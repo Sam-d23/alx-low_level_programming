@@ -18,6 +18,7 @@ return (-1);
 }
 for (size_t i = 0; i < size; i++)
 {
+printf("Value being compared: %d\n", array[i]);
 if (array[i] == value)
 {
 return (i);
