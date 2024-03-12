@@ -5,9 +5,9 @@
 /**
  * linear_search - searches for a value in an array of
  * integers using the Linear search algorithm
- * @array - a pointer to the first element of the array to search in
- * @size - Array size
- * @value - The value being looked for
+ * @array: a pointer to the first element of the array to search in
+ * @size: Array size
+ * @value: The value being looked for
  * Return: first index where value is located (Success), else -1
  */
 int linear_search(int *array, size_t size, int value)
@@ -22,6 +22,6 @@ if (array[i] == value)
 {
 return (i);
 }
-return (-1;)
+return (-1);
 }
 }
