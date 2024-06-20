@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-#include<stdio.h>
+#include <stdio.h>
 /* main - Checks a number and prints whether it is zero, negative or positive
  * Return: 0 (Success)
 */
@@ -21,7 +21,7 @@ int main(void)
 	}
 	else
 	{
-	printf("%%d is negative\n", n);
+	printf("%d is negative\n", n);
 	}
 	return (0);
 }
