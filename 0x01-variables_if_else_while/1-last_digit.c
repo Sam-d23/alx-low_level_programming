@@ -13,21 +13,31 @@
  */
 int main(void)
 {
-int n, lastd;
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-lastd = n % 10;
-if (lastd > 5)
-{
-printf("last digit of %d is %d and is greater than 5\n", n, lastd);
-}
-else if (lastd == 0)
-{
-printf("last digit of %d is %d and is0\n", n, lastd);
-}
-else if (lastd < 6 && lastd != 0)
-{
-printf("last digit of %d is %d and is less than 6 and not 0", n, lastd);
-}
-return (0);
+    int n;
+    int last_digit;
+
+    /* Seed the random number generator using the current time */
+    srand(time(0));
+    /* Assign a random number to n, shifted to include negative numbers */
+    n = rand() - RAND_MAX / 2;
+    /* Calculate the last digit of n */
+    last_digit = n % 10;
+
+    /* Print the last digit and the corresponding message */
+    printf("Last digit of %d is %d and is ", n, last_digit);
+    if (last_digit > 5)
+    {
+        printf("greater than 5\n");
+    }
+    else if (last_digit == 0)
+    {
+        printf("0\n");
+    }
+    else
+    {
+        printf("less than 6 and not 0\n");
+    }
+
+    /* Return 0 to indicate successful execution */
+    return (0);
 }
