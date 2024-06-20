@@ -1,7 +1,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* main - Checks a number and prints whether it is zero, negative or positive
+/* 
+ * main - Entry point of the program.
+ *
+ * Description: This program assigns a random number to the variable n
+ * each time it is executed and prints whether the number stored in n is
+ * positive, zero, or negative.
+ *
  * Return: 0 (Success)
 */
 int main(void)
